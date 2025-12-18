@@ -799,17 +799,30 @@ p {
     gap: 2rem;
 }
 
-.achievement {
+.hall-of-fame-page .achievements {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.hall-of-fame-page .achievement {
     background: white;
     padding: 2rem;
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-md);
     text-align: left;
+    transition: transform var(--transition-base);
 }
 
-.achievement h4 {
+.hall-of-fame-page .achievement:hover {
+    transform: translateY(-10px);
+}
+
+.hall-of-fame-page .achievement h4 {
     margin-bottom: 1rem;
     color: var(--color-heading);
+    font-size: 1.4rem;
 }
 
 .committee-section {
@@ -927,6 +940,52 @@ p {
     margin: 0 auto 1rem;
 }
 
+.hall-of-fame-intro {
+    margin-top: 4rem;
+    text-align: center;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-lg);
+    backdrop-filter: blur(10px);
+}
+
+.hall-of-fame-intro h3 {
+    color: white;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+}
+
+.hall-of-fame-intro p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.1rem;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.view-hall-of-fame {
+    margin-top: 4rem;
+    text-align: center;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-lg);
+    backdrop-filter: blur(10px);
+}
+
+.view-hall-of-fame h3 {
+    color: white;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+}
+
+.view-hall-of-fame p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.1rem;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto 1.5rem;
+}
+
 /* Footer */
 .footer {
     background: var(--color-darker);
@@ -1039,6 +1098,10 @@ p {
     }
     
     .upcoming-events {
+        padding: 1.5rem;
+    }
+    
+    .instagram-highlights {
         padding: 1.5rem;
     }
 }
@@ -1304,6 +1367,87 @@ p {
 }
 
 /* Performance Optimization */
+.instagram-highlights {
+    margin-top: 3rem;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+}
+
+.instagram-highlights h3 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: white;
+    font-size: 1.8rem;
+}
+
+.highlight-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+.highlight-card {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 15px;
+    padding: 1.5rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.highlight-card:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: translateY(-5px);
+}
+
+.highlight-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.highlight-card h4 {
+    color: white;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.highlight-card p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(255, 107, 107, 0.4); }
+    70% { box-shadow: 0 0 0 10px rgba(255, 107, 107, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(255, 107, 107, 0); }
+}
+
+.view-hall-of-fame {
+    margin-top: 4rem;
+    text-align: center;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-lg);
+    backdrop-filter: blur(10px);
+}
+
+.view-hall-of-fame h3 {
+    color: white;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+}
+
+.view-hall-of-fame p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.1rem;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto 1.5rem;
+}
+
 @media (prefers-reduced-motion: reduce) {
     *,
     *::before,
